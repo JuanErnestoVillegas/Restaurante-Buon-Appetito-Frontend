@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Italianno', cursive;
+    font-family: 'Roboto Serif', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/*code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}*/
+
+
+/*@import url("https://fonts.googleapis.com/css2?family=Italianno&family=Roboto+Serif:ital,wght@1,100;1,200&display=swap");*/
+
+
+:root {
+        --old-mauve: #531D35ff;
+        --gold-crayola: #E5C697ff;
+        --indian-yellow: #D49B4Eff;
+        --carnelian: #A8231Eff;
+        --gunmetal: #202932ff;
+        --burnt-umber: #8F3220ff;
+        --copper: #C57337ff;
+        --saddle-brown: #935A2Fff;
+        --dark-moss-green: #4C5B24ff;
+        --rust: #B34D25ff;
+        --imperial-red: #E13D3D;
+        --green-pantone: #22A428;
+        /* /* --buon-font: 'Italianno', cursive;
+        --title-font: 'Roboto Serif', serif; */
+}
+
+
+/*.buon-font {
+        font-family: var (--buon-font);
+    }*/
+
+
+/*.title-font {
+        font-family: var (--title-font);
+    }*/
+
+
+/*.navb {
+        height: 100px;
+        padding: 0px 50px;
+        background-color: #22A428;
+    }
+    
+    .navposition {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        z-index: 999;
+    }*/

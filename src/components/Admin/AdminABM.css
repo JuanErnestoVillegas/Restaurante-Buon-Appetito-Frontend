@@ -1,0 +1,11 @@
+.selected{
+    background-color: var(--green-pantone);
+}
+
+.products{
+    cursor: pointer;
+}
+
+.boton{
+    background-color: var(--green-pantone);
+}
