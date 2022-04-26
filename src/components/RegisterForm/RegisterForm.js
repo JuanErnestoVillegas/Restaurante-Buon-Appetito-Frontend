@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import axiosClient from "../../config/axiosClient";
 import Mail from '../mail';
 import ModalRegister from '../ModalRegister/ModalRegister';
+import ModalEditRegister from "../ModalEditRegister/ModalEditRegister";
 import './RegisterForm.css'
 
 
@@ -17,7 +18,9 @@ const RegisterForm = () => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const handleEdit = () => setShowEdit(true);
+  const handleShowEdit = () => setShowEdit(true);
+  const handleCloseEdit = () => setShowEdit(false);
+
 
   const getUsers = async () => {
     try {
@@ -51,6 +54,7 @@ const RegisterForm = () => {
         <Button variant="danger" onClick={deleteUser}>
           Borrar Usuario
         </Button>
+        {/* <Button variant="warning" onClick={handleShowEdit} className='m-3'>Editar Usuario</Button> */}
         <Table striped bordered hover>
           <thead>
             <tr>
@@ -62,6 +66,7 @@ const RegisterForm = () => {
             </tr>
           </thead>
           <tbody>
+
             {users.map((user) =>
               user._id == selected ? (
                 <tr
@@ -75,7 +80,7 @@ const RegisterForm = () => {
                   <td>{user.email}</td>
                   <td>{user.role}</td>
                   <td>
-                  <Button variant="success" onClick={handleEdit} className="m-3">
+                  <Button variant="success" onClick={handleShowEdit} className="m-3">
                       Editar
                   </Button>
                   </td>
@@ -92,7 +97,7 @@ const RegisterForm = () => {
                   <td>{user.email}</td>
                   <td>{user.role}</td>
                   <td>
-                  <Button variant="success" onClick={handleEdit} className="m-3">
+                  <Button variant="success" onClick={handleShowEdit} className="m-3">
                       Editar
                   </Button>
                   </td>
@@ -107,6 +112,7 @@ const RegisterForm = () => {
           setUsers={setUsers}
           users={users}
         />
+        <ModalEditRegister show={showEdit} handleClose={handleCloseEdit} selected={selected} getUsers={getUsers}/>
       </Container>
     </>
   );

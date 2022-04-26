@@ -37,6 +37,7 @@ console.log(values);
     values,
     handleKeyUp,
     handleSubmit,
+    setValues,
     errors
   }
 }
