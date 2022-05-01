@@ -3,9 +3,9 @@
     top: 0px;
     height: 70px;
     padding: 10px 30px 0px 30px;
-    margin-bottom: -70px;
+    margin-bottom: 0px;
     background-color: #22A428;
-    opacity: 0.6 !important;
+    opacity: 0.8 !important;
     z-index: 5;
     display: flex;
     align-items: center;
