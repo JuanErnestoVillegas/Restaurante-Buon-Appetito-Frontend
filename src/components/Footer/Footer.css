@@ -1,99 +1,11 @@
-.main-footer {
-    width: 100%;
-    height: 100px;
-    color: white;
-    background-color: #E13D3D;
-    opacity: 0.9 !important;
-    display: flex;
-    flex: 1;
-    flex-wrap: wrap;
-    position: fixed;
-    padding-top: 0.5em;
-    bottom: 0;
+.footer_container {
+    background-color: #E13D3D !important;
 }
 
-.logoFooter {
-    height: 65px;
-    width: 65px;
+.footer_title {
+    font-size: 1.5rem;
 }
 
-.list-unstyled {
-    font-size: 0.6rem;
-}
-
-.row_footer {
-    font-size: 0.85rem;
-    display: flex;
-}
-
-.h4_Footer {
-    font-size: 1.1rem;
-    margin-bottom: 0.1rem;
-}
-
-.socialFooter {
-    font-size: 1.7rem;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 10px;
-    margin: 0px 5px;
-    border-style: solid;
-    border-width: 0px 0px 1px 0px;
-    border-color: transparent;
-    transition: 250ms;
-}
-
-.socialFooter:hover {
-    color: blanchedalmond !important;
-    border-color: white;
-    transition: 250ms;
-}
-
-.date_Footer {
-    font-size: 0.8rem;
-    margin-top: 0.1rem;
-}
-
-@media screen and (max-width: 770px) {
-    .main-footer {
-        color: white;
-        background-color: #E13D3D;
-        opacity: 0.9 !important;
-        display: flex;
-        flex: 1;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    .logoFooter {
-        height: 45px;
-        width: 45px;
-    }
-    .list-unstyled {
-        font-size: 0.4rem;
-    }
-    .row_footer {
-        font-size: 0.65rem;
-        display: flex;
-    }
-    .h4_Footer {
-        font-size: 0.9rem;
-        margin-bottom: 0.1rem;
-    }
-    .socialFooter {
-        font-size: 1.3rem;
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-        text-align: center;
-        padding: 8px;
-        margin: 0px 1px;
-        border-style: solid;
-        border-width: 0px 0px 1px 0px;
-        border-color: transparent;
-        transition: 250ms;
-    }
-    .date_Footer {
-        font-size: 0.4rem;
-        margin-top: 0.1rem;
-    }
+.footer_icons {
+    font-size: 1.5rem;
 }
