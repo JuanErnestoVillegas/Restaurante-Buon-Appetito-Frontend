@@ -1,7 +1,6 @@
 import React from "react";
 import "./Encabezado.css";
 import LogoBuonAppetito from "../../assets/Logo/Logo Buon Appetito.png";
-// import LogoBuonAppetito from "./../../assets/img/Logo/Logo Buon Appetito.png";
 
 const Encabezado = ({imageSrc}) => {
     return ( 

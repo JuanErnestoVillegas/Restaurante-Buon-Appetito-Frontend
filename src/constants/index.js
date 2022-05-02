@@ -19,3 +19,8 @@ export const ADD_PRODUCT_VALUES = {
   name: "",
   abbreviation: ""
 } 
+
+
+export const RECOVER_VALUES = {
+  email: ""
+} 

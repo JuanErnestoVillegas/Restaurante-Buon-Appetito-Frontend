@@ -56,7 +56,7 @@ const Navbar = () => {
               <Link className="navbar_link" to="/contacto"><MdOutlineContactSupport className="m-2"/>Contacto</Link>
             </li>
             <li className="navbar_item" >
-              <Link className="navbar_link" to="#" onClick={logout}><MdOutlineContactSupport className="m-2" />Cerrar sesión</Link>
+              <Link className="navbar_link" to="/" onClick={logout}><MdOutlineContactSupport className="m-2" />Cerrar sesión</Link>
             </li>
             {user?.role=='ADMIN'?
             <>

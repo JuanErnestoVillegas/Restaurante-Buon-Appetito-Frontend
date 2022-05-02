@@ -6,11 +6,11 @@ import { UserContext } from '../../context/UserContext';
 import { validationLogin } from '../../helpers/validations';
 import {BiUserPin} from 'react-icons/bi';
 import mail from '../mail';
-import './LoginForm.css'
 import { Link, useNavigate } from 'react-router-dom';
 import useForm from "../../hooks/useForm";
 import { AiOutlineLogin } from "react-icons/ai";
 import ModalRegister from '../ModalRegister/ModalRegister';
+import recover from '../RecoverForm/RecoverForm';
 import './LoginForm.css';
 
 
@@ -119,7 +119,8 @@ const LoginForm = () =>{
               className="login-button mt-1 mb-1 d-flex center"
               type="submit"
             >
-                     <Link to={`/mail`}>
+              <Link to={`/recover`}>
+                     {/* <Link to={`/mail`}> */}
                      Olvidé mi contraseña
                     </Link>
               

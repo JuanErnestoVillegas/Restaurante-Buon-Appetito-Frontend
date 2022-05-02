@@ -25,7 +25,7 @@ const Mail = () => {
   };
  
   return (
-    <form ref={form} onSubmit={sendEmail}>
+     <form ref={form} onSubmit={sendEmail}>
         <br />
         <br />
         <br />

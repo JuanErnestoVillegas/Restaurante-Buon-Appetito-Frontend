@@ -17,29 +17,29 @@ const Footer = () => {
             <h4 className="h4_Footer">
               <ImLocation />
             </h4>
-            <ui className="list-unstyled">
+            <ul className="list-unstyled">
               <li>3 8 1 - 3 3 3 3 3 3 9</li>
               <li>San Miguel, Tucuman</li>
               <li>Calle Maipú 3 3 3</li>
-            </ui>
+            </ul>
           </div>
           {/* Columna2 */}
           <div className="col">
             <h4 className="h4_Footer">
               <BsCalendarDay />
             </h4>
-            <ui className="list-unstyled">
+            <ul className="list-unstyled">
               <li>LUN - VIER</li>
               <li>0 9 : 0 0 - 2 1 : 0 0</li>
               <li>SAB - DOM 0 9 : 0 0 - 1 4 : 0 0</li>
-            </ui>
+            </ul>
           </div>
           {/* Columna3 */}
           <div className="col">
             <h4 className="h4_Footer">
               <BsPeopleFill />
             </h4>
-            <ui>
+            <ul>
               
               <a className="socialFooter" href="https://www.instagram.com/" target="_blank"><BsInstagram/></a>
 
@@ -47,7 +47,7 @@ const Footer = () => {
               <a className="socialFooter" href="https://www.facebook.com/" target="_blank"><BsFacebook/></a>
 
               
-            </ui>
+            </ul>
           </div>
         </div>
         <hr className="mb-1 mt-1" />

@@ -7,6 +7,7 @@ const UserProvider = ({children}) => {
     const [user,setUser] = useState(null);
     const [auth, setAuth] = useState(false);
     const [token, setToken] = useState(null);
+    const [password, setPassword] = useState(null); 
     const navigate = useNavigate();    
     
     const login = async (values)=>{
@@ -44,6 +45,20 @@ const UserProvider = ({children}) => {
       }      
     }
 
+    // const getPassword = async(values)=>{
+    const getPassword = async(values)=>{
+      try {
+         const response = await axiosClient.get('/users/',values);
+        // const response = await axiosClient.get("/users/", values);   FUNCA
+        // const response = await axiosClient.get("/user");
+        // const {response} = await axiosClient.get("/user/:email");
+        console.log(response.data);
+        // setPassword(response.data.user.password); 
+      } catch (error) {
+        console.log(error);
+      }      
+    }
+
     const logout = ()=>{
       setAuth(false);
       setToken(null);
@@ -52,7 +67,7 @@ const UserProvider = ({children}) => {
       localStorage.removeItem('user');
       navigate('/');
     }
-
+ 
     return (
       <UserContext.Provider value={{
           user,          
@@ -60,7 +75,8 @@ const UserProvider = ({children}) => {
           login,
           auth,
           getAuth,
-          logout
+          logout,          
+          getPassword
         }}>
         {children}
       </UserContext.Provider>

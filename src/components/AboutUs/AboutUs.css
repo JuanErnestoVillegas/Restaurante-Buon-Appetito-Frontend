@@ -1,9 +1,10 @@
-.content-all {
+  .content-all {
     width: 210px;
     margin: auto;
     perspective: 800px;
     position: relative;
     margin-top: 25px;
+    height: 100%;
     background-attachment: fixed;
     background-size: cover;
 }

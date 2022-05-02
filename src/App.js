@@ -6,6 +6,7 @@ import Layout from "./components/Layout/Layout";
 import UserProvider from "./context/UserContext";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Recover from "./pages/Recover";
 import Admin from "./pages/Admin";
 import React from 'react'; //Fer//
 import AboutUs from "./components/AboutUs/AboutUs";  
@@ -15,6 +16,7 @@ import ProductDetail from "./pages/ProductDetail";
 import Products from "./pages/Products";
 import Mail from "./components/mail";
 import ContactForm from "./components/ContactForm/ContactForm";
+// import RecoverForm from "./components/RecoverForm/RecoverForm"
 
 function App() {
   return (
@@ -28,6 +30,7 @@ function App() {
                 <Route path="/login" element={<Login /> }/>
                 <Route path="/contacto" element={<ContactForm /> }/>
                 <Route path="/register" element={<Register />} />
+                <Route path="/recover" element={<Recover/>} />
                 <Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} />
                 <Route path="/products" element={<PrivateRoute><Products /></PrivateRoute>} />
                 <Route path="/carrito" element={<CartPage />} />
