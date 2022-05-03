@@ -1,25 +1,43 @@
+import { useEffect } from "react";
 import { Modal, Button, FloatingLabel, Form } from "react-bootstrap";
 import axiosClient from "../../config/axiosClient";
 import { ADD_PRODUCT_VALUES } from "../../constants";
 import useForm from "../../hooks/useForm";
-import "./AddModal.css";
-import file from "./../../assets/img/cardspizza.jpg"
+import "./EditModal.css";
 
-const AddModal = ({ show, handleClose, setProducts, products }) => {
-  const addProduct = async (info) => {
+const EditModal = ({ show, handleClose, selected, getProducts}) => {
+  
+    const getProduct = async () => {
     try {
-      const response = await axiosClient.post("/products", info);
-      console.log(response.data);
-      setProducts([...products, response.data.productadd]);
+      const response = await axiosClient.get("/products/product/" + selected);
+      setValues(response.data.product);
     } catch (error) {
       console.log(error);
     }
   };
-  const { handleSubmit, handleKeyUp } = useForm(ADD_PRODUCT_VALUES, addProduct);
+
+  const updateProduct = async (info) => {
+    try {
+      await axiosClient.put("/products/" + selected, info);
+      getProducts();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getProduct();
+  }, [selected]);
+
+  const { values, setValues, handleSubmit, handleKeyUp } = useForm(
+    ADD_PRODUCT_VALUES,
+    updateProduct
+  );
+  console.log(values);
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
-        <Modal.Title>Agregar Producto</Modal.Title>
+        <Modal.Title>Modificar Producto</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <form onSubmit={handleSubmit} className="h-100">
@@ -34,6 +52,7 @@ const AddModal = ({ show, handleClose, setProducts, products }) => {
               onKeyUp={handleKeyUp}
               name="name"
               className=""
+              defaultValue={values.name}
             />
           </FloatingLabel>
           <FloatingLabel
@@ -47,6 +66,7 @@ const AddModal = ({ show, handleClose, setProducts, products }) => {
               onKeyUp={handleKeyUp}
               name="description"
               className=""
+              defaultValue={values.description}
             />
           </FloatingLabel>
           <FloatingLabel
@@ -60,19 +80,21 @@ const AddModal = ({ show, handleClose, setProducts, products }) => {
               onKeyUp={handleKeyUp}
               name="price"
               className=""
+              defaultValue={values.price}
             />
           </FloatingLabel>
           <FloatingLabel
-            controlId="floatingPassword"
+            controlId="floatingInput"
             label="Imagen"
             className="mb-3 floating"
           >
             <Form.Control
-              type="file"
-              placeholder="Img"
+              type="text"
+              placeholder="img"
               onKeyUp={handleKeyUp}
               name="image"
               className=""
+              defaultValue={values.image}
             />
           </FloatingLabel>
           <Button
@@ -80,13 +102,12 @@ const AddModal = ({ show, handleClose, setProducts, products }) => {
             type="submit"
             onClick={handleClose}
           >
-            Agregar
+            Modificar
           </Button>
         </form>
-        
       </Modal.Body>
     </Modal>
   );
 };
 
-export default AddModal;
+export default EditModal;

@@ -20,22 +20,26 @@ const Products = () => {
         getProducts();
     },[])
     return (
-      <Container className="mt-5">        
+      <Container className="mt-5">
         <Row xs={1} md={3} className="g-2">
-        {products.map((product) => (
-          <Col>
-            <ProductCard
-            className="m-3"
-            id={product._id}
-            title={product.name}
-            description={product.description}
-            image={product.image}        
-            />
-          </Col>
-        ))}
-      </Row>
+          {products.map((product) => (
+            <Col>
+              <ProductCard
+                className="m-3"
+                id={product._id}
+                title={product.name}
+                description={product.description}
+                image={product.image}
+              />
+            </Col>
+          ))}
+        </Row>
+        <form action="/upload" method="POST" encType="multipart/form-data">
+          <input type="file" name="image"></input>
+          <button type="submit">upload</button>
+        </form>
       </Container>
-     );
+    );
 }
  
 export default Products;
