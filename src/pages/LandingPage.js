@@ -13,7 +13,7 @@ function LandingPage  ()  {
   return (
     
       <div className="App">
-        <Navbar/>
+        {/* <Navbar/> */}
 
         <Encabezado imageSrc={chef}/>
 
@@ -30,7 +30,7 @@ function LandingPage  ()  {
         title={"Disfruta el momento"}
         subtitle={"crea recuerdos con las personas que quieres!"} flipped={true}/>
 
-        <Footer/>
+        {/* <Footer/> */}
         
       </div>
     

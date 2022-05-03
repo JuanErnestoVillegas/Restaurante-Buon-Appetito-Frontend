@@ -66,7 +66,7 @@ const LoginForm = () =>{
     <div className="background-login">
     <div className="login-portada">
       <div className="login-portada-text">
-        {/* <BiUserPin className="login-icon"/> */}
+        <BiUserPin className="login-icon"/>
         <Form className="mt-2" onSubmit={handleSubmit}>
         <AiOutlineLogin className="login-icon" />
           <Form.Group className="mb-2 mt-3" controlId="formBasicEmail">
@@ -101,26 +101,12 @@ const LoginForm = () =>{
             <Button variant="light" onClick={handleShow} className="login-button mt-1 mb-1">
                Registrarse
             </Button>
-
-            {/* <Button
-              variant="light"
-              className="login-button mt-1 mb-1"
-              type="submit"
-            >
-
-                     <Link to={`/register`}>
-                            Registrarse
-                    </Link>
-
-
-            </Button> */}
             <Button
               variant="danger"
               className="login-button mt-1 mb-1 d-flex center"
               type="submit"
             >
-              <Link to={`/recover`}>
-                     {/* <Link to={`/mail`}> */}
+              <Link to={`/recover`}>                     
                      Olvidé mi contraseña
                     </Link>
               

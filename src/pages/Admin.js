@@ -9,7 +9,7 @@ const Admin = () => {
     return (
     
       <Container className="mt-5">
-        <br></br><br></br>
+        <br />
         <h1>Tabla de Administracion</h1>
         
        <AdminABM />

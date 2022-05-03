@@ -14,11 +14,11 @@ align-items:center;
 const Login = () => {
   return (
     <>
-      <Navbar />
+
       <FormContainer>
         <LoginForm />
       </FormContainer>
-      <Footer />
+
     </>
   );
 };

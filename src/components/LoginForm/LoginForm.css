@@ -128,7 +128,7 @@ form {
 
 form {
   height: 60vh;
-  margin: auto;
+  margin: auto;  
   color: white;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 10px 20px;
@@ -139,7 +139,7 @@ form {
   background-image: url("./../../assets/img/pizza-3007395_1280.jpg");
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
