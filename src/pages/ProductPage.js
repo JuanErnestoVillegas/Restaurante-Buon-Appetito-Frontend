@@ -28,9 +28,7 @@ const ProductPage = () => {
       <Container className="m-5">
         <Row>
         
-          <DetailsProduct
-        
-          ></DetailsProduct>
+          <DetailsProduct></DetailsProduct>
         </Row>
       </Container>
     </>

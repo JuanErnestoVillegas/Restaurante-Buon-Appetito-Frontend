@@ -1,21 +1,27 @@
 import { useEffect, useState } from "react";
-import { Container, Table, Button } from "react-bootstrap";
+import { Container, Table, Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import axiosClient from "../../config/axiosClient";
 import AddModal from "../AddModal/AddModal";
+import EditModal from "../EditModal/EditModal";
 import "./AdminABM.css";
+import pizza from "../../assets/LandingImg/pizza.jpg";
+
 
 const AdminABM = () => {
   const [products, setProducts] = useState([]);
   const [show, setShow] = useState(false);
+  const [showEdit, setShowEdit] = useState(false);
   const [selected, setSelected] = useState(null);
 
   const handleClose = () => setShow(false);
+  const handleCloseEdit = () => setShowEdit(false);
   const handleShow = () => setShow(true);
+  const handleShowEdit = () => setShowEdit(true);
 
   const getProducts = async () => {
     try {
-      const response = await axiosClient.get("/products/");
+      const response = await axiosClient.get("/products");
       setProducts(response.data.products);
       console.log(response.data.products);
     } catch (error) {
@@ -41,7 +47,10 @@ const AdminABM = () => {
         <Button variant="success" onClick={handleShow} className="m-3">
           Agregar Productos
         </Button>
-        <Button variant="danger" onClick={deleteProduct}>
+        <Button variant="warning" onClick={handleShowEdit} className="m-3">
+          Modificar Producto
+        </Button>
+        <Button variant="danger" onClick={deleteProduct} className="m-3">
           Borrar Producto
         </Button>
         <Table striped bordered hover>
@@ -50,6 +59,7 @@ const AdminABM = () => {
               <th>id</th>
               <th>Nombre</th>
               <th>Descripcion</th>
+              <th>Imagen</th>
               <th>Precio</th>
               <th>Ver</th>
             </tr>
@@ -65,6 +75,9 @@ const AdminABM = () => {
                   <td>{product._id}</td>
                   <td>{product.name}</td>
                   <td>{product.description}</td>
+                  <td>
+                    <Card.Img variant="top" className="card-m" src={pizza} />
+                  </td>
                   <td>{product.price}</td>
                   <td>
                     <Link to={`/product/${product._id}`}>
@@ -81,6 +94,9 @@ const AdminABM = () => {
                   <td>{product._id}</td>
                   <td>{product.name}</td>
                   <td>{product.description}</td>
+                  <td>
+                    <Card.Img variant="top" className="card-m" src={pizza} />
+                  </td>
                   <td>{product.price}</td>
                   <td>
                     <Link to={`/product/${product._id}`}>
@@ -97,6 +113,12 @@ const AdminABM = () => {
           handleClose={handleClose}
           setProducts={setProducts}
           products={products}
+        />
+        <EditModal
+          show={showEdit}
+          handleClose={handleCloseEdit}
+          selected={selected}
+          getProducts={getProducts}
         />
       </Container>
     </>
