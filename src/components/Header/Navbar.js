@@ -43,7 +43,7 @@ const Navbar = () => {
               <Link className="navbar_link" to="/aboutUs"><MdOutlineSocialDistance className="m-2"/>Nosotros</Link>
             </li>
             <li className="navbar_item" >
-              <Link className="navbar_link" to="#"><MdOutlineContactSupport className="m-2"/>Contacto</Link>
+              <Link className="navbar_link" to="/contacto"><MdOutlineContactSupport className="m-2"/>Contacto</Link>
             </li>
             </>
             :
@@ -78,7 +78,7 @@ const Navbar = () => {
               <Link className="navbar_link" to="/aboutUs"><MdOutlineSocialDistance className="m-2"/>Nosotros</Link>
             </li>
             <li className="navbar_item" >
-              <Link className="navbar_link" to="#"><MdOutlineContactSupport className="m-2"/>Contacto</Link>
+              <Link className="navbar_link" to="/contacto"><MdOutlineContactSupport className="m-2"/>Contacto</Link>
             </li>
             </>
             }
