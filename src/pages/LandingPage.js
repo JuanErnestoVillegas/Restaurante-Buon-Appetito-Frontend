@@ -4,8 +4,6 @@ import front from "../assets/LandingImg/front.jpg";
 import spaghetti from "../assets/LandingImg/spaghetti.jpg";
 import Encabezado from "../components/Encabezado/Encabezado";
 import Slider from "../components/Slider/Slider";
-import Navbar from "../components/Header/Navbar";
-import Footer from "../components/Footer/Footer";
 
 
 
@@ -13,7 +11,6 @@ function LandingPage  ()  {
   return (
     
       <div className="App">
-
 
         <Encabezado imageSrc={chef}/>
 
