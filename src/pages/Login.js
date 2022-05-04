@@ -14,11 +14,11 @@ align-items:center;
 const Login = () => {
   return (
     <>
-      
+
       <FormContainer>
         <LoginForm />
       </FormContainer>
-      
+
     </>
   );
 };

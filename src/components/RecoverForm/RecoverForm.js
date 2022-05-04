@@ -31,9 +31,10 @@ const RecoverForm = () =>{
   let existe = false;
   
   const verificarMail = async (values) =>{
-     try {
+     try {      
       const response = await axiosClient.post("/users/recover", { email: values });
       console.log(response.data);
+      
       if (!response.data.isEmailExist) {
           sweetalert2('Error', 'El usuario no está registrado con ese email.');        
       } else{

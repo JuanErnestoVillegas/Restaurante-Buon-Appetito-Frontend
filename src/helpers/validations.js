@@ -69,3 +69,28 @@ export const validationMail = (values) =>{
   }
   return errors;
 }
+
+export const validateContact = (values)=> {
+  let errorsC = {};
+  
+  if (!values.name) {
+      errorsC.name = 'Nombre requerido';
+  } 
+  if (values.name.length < 3 || values.name.length >20) {
+      errorsC.name = 'El nombre debe tener entre 3 y 20 letras';
+  }
+  if (!values.lastname) {
+      errorsC.name = 'Apellido requerido';
+  } 
+  if (values.lastname.length < 3 || values.lastname.length >20) {
+      errorsC.name = 'El apellido debe tener entre 3 y 20 letras';
+  }
+  if(!values.email){
+    errorsC.email='Campo Email obligatorio.'
+  } else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)){
+    errorsC.email='El email no es válido.';
+  } else if(values.email.lenght >30 ){
+    errorsC.email='El email no puede tener más de 30 caracteres.';
+  }
+  return errorsC;
+}
