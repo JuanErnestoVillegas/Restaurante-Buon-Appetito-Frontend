@@ -34,10 +34,10 @@ const Products = () => {
             </Col>
           ))}
         </Row>
-        <form action="/upload" method="POST" encType="multipart/form-data">
+        {/* <form action="/upload" method="POST" encType="multipart/form-data">
           <input type="file" name="image"></input>
           <button type="submit">upload</button>
-        </form>
+        </form> */}
       </Container>
     );
 }
