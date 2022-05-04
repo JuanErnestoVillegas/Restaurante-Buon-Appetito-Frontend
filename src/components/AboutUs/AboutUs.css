@@ -1,10 +1,15 @@
-  .content-all {
+.aboutUs {
+    height: 100vh;
+    padding: auto;
+    margin: auto;
+}
+
+.content-all {
     width: 200px;
     margin: auto;
     perspective: 800px;
     position: relative;
     margin-top: 50px;
-    height: 100%;
     background-attachment: fixed;
     background-size: cover;
     flex: 1;

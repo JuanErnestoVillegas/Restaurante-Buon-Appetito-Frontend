@@ -1,5 +1,9 @@
-.background-contact {
-    background-image: url("./../../assets/img/cardssalsa.jpg");
+.parrafo_error {
+    font-family: 'Italianno', cursive;
+    font-size: 50px;
+}
+
+.error_content {
     background-size: cover;
     width: 100vw;
     height: 80vh;

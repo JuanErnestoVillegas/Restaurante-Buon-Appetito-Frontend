@@ -17,8 +17,10 @@ export const REGISTER_VALUES = {
 
 export const ADD_PRODUCT_VALUES = {
   name: "",
-  abbreviation: ""
-} 
+  abbreviation: "",
+  price: "",
+  image: "",
+}; 
 
 
 export const RECOVER_VALUES = {

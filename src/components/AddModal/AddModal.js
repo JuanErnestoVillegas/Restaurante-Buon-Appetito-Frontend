@@ -68,7 +68,7 @@ const AddModal = ({ show, handleClose, setProducts, products }) => {
             className="mb-3 floating"
           >
             <Form.Control
-              type="file"
+              type="url"
               placeholder="Img"
               onKeyUp={handleKeyUp}
               name="image"

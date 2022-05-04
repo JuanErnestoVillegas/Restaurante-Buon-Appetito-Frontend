@@ -38,7 +38,7 @@ const Footer = () => {
                         </ul>
                         <hr className="mb-1 mt-1" />
                          <div className="mt-2">
-                            &copy;{new Date().getFullYear()} BUON APPETITO | Todos los derechos reservados 
+                            &copy;{new Date().getFullYear()} BUON APPETITO | Todos los derechos reservados | <Link to="errorPage" class='text-reset'>Privacidad</Link>
                          </div>
 
 

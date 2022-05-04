@@ -2,6 +2,7 @@ import {useForm}from "../../hooks/useForm";
 import { useEffect, useState } from "react";
 import axiosClient from "../../config/axiosClient";
 import {Form, Button, Row, Col} from "react-bootstrap";
+import {MdOutlineContactSupport} from "react-icons/md";
 import './ContactForm.css';
 
 const ContactForm = () =>{
@@ -29,9 +30,17 @@ const ContactForm = () =>{
   
   return (
     <div className="background-contact">
+<<<<<<< HEAD
       <div className="contact-portada">
         <div className="contact-portada-text">
           <Form onSubmit={handleSubmit}>
+=======
+      <div className="contact_content">
+        <div >
+          <Form>
+          <MdOutlineContactSupport className="login-icon text-reset py-2" />
+
+>>>>>>> 8d4f24497972d18ad545f523cbf22655b72f4388
             <Row>
               <Col>
                  <Form.Control

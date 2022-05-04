@@ -1,63 +1,63 @@
 form {
-  height: 60vh;
-  margin: auto;  
-  color: white;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 10px 20px;
-  border-radius: 7;
+    height: 60vh;
+    margin: auto;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 7;
 }
 
 .background-login {
-  background-image: url("./../../assets/img/pizza-3007395_1280.jpg");
-  background-size: cover;
-  width: 100vw;
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    background-image: url("./../../assets/img/cardspasta.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .login-portada {
-  background-position: center;
-  height: 95vh;
-  background-size: cover;
+    background-position: center;
+    height: 95vh;
+    background-size: cover;
 }
 
 .login-portada-text {
-  margin-top: 12vh;
-  height: 85vh;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    margin-top: 12vh;
+    height: 85vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .login-icon {
-  color: var(--gunmetal);
-  font-size: 50px;
-  margin-top: 5px;
+    color: var(--gunmetal);
+    font-size: 50px;
+    margin-top: 5px;
 }
 
 .login-input {
-  width: 50vw !important;
+    width: 50vw !important;
 }
 
 .login-button {
-  height: 60px;
-  margin: 10px;
+    height: 60px;
+    margin: 10px;
 }
 
 .container-buttons {
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .errors {
-  font-size: small;
-  height: 20px;
-  margin-top: 0px;
+    font-size: small;
+    height: 20px;
+    margin-top: 0px;
 }
