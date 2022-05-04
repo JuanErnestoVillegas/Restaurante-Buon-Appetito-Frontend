@@ -24,3 +24,10 @@ export const ADD_PRODUCT_VALUES = {
 export const RECOVER_VALUES = {
   email: ""
 } 
+
+export const CONTACT_VALUES = {
+  name: "",
+  lastname: "",
+  email:"",
+  message:""
+} 

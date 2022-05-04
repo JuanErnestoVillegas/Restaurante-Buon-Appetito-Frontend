@@ -23,22 +23,42 @@ const ContactForm = () =>{
     getUsers();
   }, []);
 
+  // const { handleKeyUp, handleSubmit, values, errors} = useForm(LOGIN_VALUES, login, validationLogin) 
+
+
+  
   return (
     <div className="background-contact">
       <div className="contact-portada">
         <div className="contact-portada-text">
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <Row>
               <Col>
-                <Form.Control placeholder="Nombre" />
+                 <Form.Control
+                    onKeyUp={handleKeyUp}
+                    type="text"
+                    placeholder="Nombre"
+                    name="name"
+                  />
               </Col>
               <Col>
-                <Form.Control placeholder="Apellido" />
+              <Form.Control
+                    onKeyUp={handleKeyUp}
+                    type="text"
+                    placeholder="Apellido"
+                    name="lastname"
+                  /> 
               </Col>
             </Row>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Tu dirección de email</Form.Label>
               <Form.Control type="email" placeholder="name@example.com" />
+               <Form.Control
+                    onKeyUp={handleKeyUp}
+                    type="text"
+                    placeholder="Nombre"
+                    name="name"
+                  /> 
             </Form.Group>
             <Form.Group
               className="mb-3"
@@ -61,5 +81,6 @@ const ContactForm = () =>{
     </div>
   );
 };
+
 export default ContactForm;
 

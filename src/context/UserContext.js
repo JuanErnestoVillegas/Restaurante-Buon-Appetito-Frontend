@@ -48,9 +48,6 @@ const UserProvider = ({children}) => {
     const getPassword = async(values)=>{
       try {
          const response = await axiosClient.get('/users/', values);
-        // const response = await axiosClient.get("/users/", values);   FUNCA
-        // const response = await axiosClient.get("/user");
-        // const {response} = await axiosClient.get("/user/:email");
         console.log(values);
         if(!response){
             console.log(response);
