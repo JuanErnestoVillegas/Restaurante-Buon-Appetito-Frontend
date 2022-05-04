@@ -1,10 +1,51 @@
+form {
+    height: 60vh;
+    margin: auto;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 7;
+}
+
 .background-contact {
-    background-image: url("./../../assets/img/cardssalsa.jpg");
+    background-image: url("./../../assets/img/pizza-3007395_1280.jpg");
     background-size: cover;
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.contact-portada {
+    background-position: center;
+    height: 95vh;
+    background-size: cover;
+}
+
+.contact-portada-text {
+    margin-top: 12vh;
+    height: 85vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-icon {
+    color: var(--gunmetal);
+    font-size: 55px;
+    margin-top: 8px;
+}
+
+.contact-input {
+    width: 50vw !important;
+}
+
+.contact-button {
+    height: 30px;
+    width: 30px;
+    margin: 10px;
 }
