@@ -46,6 +46,10 @@
     transition: 250ms;
 }
 
+.badge-color{
+ color: red; 
+}
+
 .navbar_link:hover {
     color: blanchedalmond !important;
     border-color: white;

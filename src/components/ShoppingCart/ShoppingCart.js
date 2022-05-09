@@ -8,8 +8,9 @@ const CarritoCompra = () => {
       <h3>Resumen de Compra</h3>
       <ListGroup>
         <ListGroup.Item className='w-100'>
-            Cras justo odio
+            PRODUCTOS ELEGIDOS
             <Button variant='danger' className='float-right'>Borrar Producto</Button>
+            <Button variant='success' className='float-right'>comprar</Button>
         </ListGroup.Item>
       </ListGroup>
       <h2>Total a Pagar</h2>
