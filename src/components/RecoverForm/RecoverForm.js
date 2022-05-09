@@ -31,9 +31,11 @@ const RecoverForm = () =>{
   let existe = false;
   
   const verificarMail = async (values) =>{
-     try {
-      const response = await axiosClient.post("/users/recover", { email: values });
+     try {      
+      console.log(values);
+      const response = await axiosClient.post("/users/recover", values);
       console.log(response.data);
+      
       if (!response.data.isEmailExist) {
           sweetalert2('Error', 'El usuario no está registrado con ese email.');        
       } else{
@@ -42,12 +44,13 @@ const RecoverForm = () =>{
       
     } catch (error) {
       console.log(error);
+      sweetalert2('Error', 'El usuario no está registrado con ese email.');  
     }
   }
 
 
 
-const {handleKeyUp, handleSubmit, errors} = useForm(RECOVER_VALUES, getPassword, validationMail)
+const {handleKeyUp, handleSubmit, errors} = useForm(RECOVER_VALUES, verificarMail, validationMail)
 
   return (
    <Form className="mt-2" onSubmit={handleSubmit}>

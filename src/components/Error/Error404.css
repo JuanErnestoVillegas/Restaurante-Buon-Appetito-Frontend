@@ -1,0 +1,14 @@
+.parrafo_error {
+    font-family: 'Italianno', cursive;
+    font-size: 50px;
+}
+
+.error_content {
+    background-size: cover;
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

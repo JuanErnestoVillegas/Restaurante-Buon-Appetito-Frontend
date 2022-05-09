@@ -4,7 +4,6 @@ import Swal from "sweetalert2";
 import { LOGIN_VALUES } from '../../constants';
 import { UserContext } from '../../context/UserContext';
 import { validationLogin } from '../../helpers/validations';
-import {BiUserPin} from 'react-icons/bi';
 import mail from '../mail';
 import { Link, useNavigate } from 'react-router-dom';
 import useForm from "../../hooks/useForm";
@@ -64,11 +63,10 @@ const LoginForm = () =>{
  
   return (
     <div className="background-login">
-    <div className="login-portada">
+    <div className="login-portada d-flex justify-content-center aling-items-center">
       <div className="login-portada-text">
-        {/* <BiUserPin className="login-icon"/> */}
         <Form className="mt-2" onSubmit={handleSubmit}>
-        <AiOutlineLogin className="login-icon" />
+        <AiOutlineLogin className="login-icon text-reset" />
           <Form.Group className="mb-2 mt-3" controlId="formBasicEmail">
             <Form.Label>Email</Form.Label>
             <Form.Control
@@ -77,7 +75,7 @@ const LoginForm = () =>{
               placeholder="Enter email"
               name="email"
             />
-            <Form.Text className="text-muted">
+            <Form.Text className="text-muted text-reset">
               No compartiremos tu correo con nadie más.
             </Form.Text>
           </Form.Group>
@@ -101,26 +99,12 @@ const LoginForm = () =>{
             <Button variant="light" onClick={handleShow} className="login-button mt-1 mb-1">
                Registrarse
             </Button>
-
-            {/* <Button
-              variant="light"
-              className="login-button mt-1 mb-1"
-              type="submit"
-            >
-
-                     <Link to={`/register`}>
-                            Registrarse
-                    </Link>
-
-
-            </Button> */}
             <Button
               variant="danger"
               className="login-button mt-1 mb-1 d-flex center"
               type="submit"
             >
-              <Link to={`/recover`}>
-                     {/* <Link to={`/mail`}> */}
+              <Link to={`/recover`} className="text-reset text-decoration-none">                     
                      Olvidé mi contraseña
                     </Link>
               

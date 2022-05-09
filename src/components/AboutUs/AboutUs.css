@@ -1,12 +1,19 @@
-  .content-all {
-    width: 210px;
+.aboutUs {
+    height: 100vh;
+    padding: auto;
+    margin: auto;
+}
+
+.content-all {
+    width: 200px;
     margin: auto;
     perspective: 800px;
     position: relative;
-    margin-top: 25px;
-    height: 100%;
+    margin-top: 50px;
     background-attachment: fixed;
     background-size: cover;
+    flex: 1;
+    -ms-flex: 1 1 auto;
 }
 
 .us-title {

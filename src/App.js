@@ -16,8 +16,12 @@ import ProductDetail from "./pages/ProductDetail";
 import Products from "./pages/Products";
 import Mail from "./components/mail";
 import ContactForm from "./components/ContactForm/ContactForm";
+<<<<<<< HEAD
 import ProductCarrito from "./components/ProductsCarrito/ProductCarrito";
 // import RecoverForm from "./components/RecoverForm/RecoverForm"
+=======
+import ErrorPage from './pages/ErrorPage'
+>>>>>>> 308e21572e3d8d726a1550e48e8cf73b4a1eeddd
 
 function App() {
   return (
@@ -39,6 +43,7 @@ function App() {
                 <Route path="/aboutUs" element={<AboutUs />} />                
                 <Route path="/product/:id" element={<PrivateRoute><ProductDetail /></PrivateRoute>}/>
                 <Route path="/mail" element={<Mail />} />
+                <Route path="/error" element={<ErrorPage />} />
               </Routes>
             </Layout>
           </ProductsProvider>

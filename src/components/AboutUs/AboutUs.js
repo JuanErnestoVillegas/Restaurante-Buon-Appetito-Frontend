@@ -1,5 +1,6 @@
 import "./AboutUs.css";
-import { Container } from "react-bootstrap";
+import React from 'react';
+import ThemeProvider from 'react-bootstrap/ThemeProvider'
 import LucasImg from "./../../assets/Integrantes/Lucas Ferruchi.jpeg";
 import GastonImg from "./../../assets/Integrantes/Gastón Devalis.jpg";
 import JuanImg from "./../../assets/Integrantes/Juan Ernesto Villegas.jpg";
@@ -8,7 +9,10 @@ import MarcosImg from "./../../assets/Integrantes/Marcos Scheuermann.jpeg";
 
 const AboutUs = () => {
   return (
-    <Container> 
+    <ThemeProvider
+  breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}
+>
+  <div className="aboutUs">
         <h2 className="us-title">Diseñadores de Buon Appetito</h2>
         <div className="content-all">
           <div className="content-carrousel">
@@ -65,7 +69,14 @@ const AboutUs = () => {
             </figure>
           </div>
         </div>    
-    </Container>
+    
+
+
+
+  </div>
+</ThemeProvider>
+
+
   );
 };
 

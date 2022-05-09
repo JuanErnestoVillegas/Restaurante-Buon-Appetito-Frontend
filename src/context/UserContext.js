@@ -45,15 +45,16 @@ const UserProvider = ({children}) => {
       }      
     }
 
-    // const getPassword = async(values)=>{
     const getPassword = async(values)=>{
       try {
-         const response = await axiosClient.get('/users/',values);
-        // const response = await axiosClient.get("/users/", values);   FUNCA
-        // const response = await axiosClient.get("/user");
-        // const {response} = await axiosClient.get("/user/:email");
-        console.log(response.data);
-        // setPassword(response.data.user.password); 
+         const response = await axiosClient.get('/users/', values);
+        console.log(values);
+        if(!response){
+            console.log(response);
+              console.log('EL USUARIO NO EXISTE');
+
+        }
+          // setPassword(response.data.user.password); 
       } catch (error) {
         console.log(error);
       }      

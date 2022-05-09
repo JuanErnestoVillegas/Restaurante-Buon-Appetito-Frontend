@@ -49,11 +49,8 @@ const Navbar = () => {
                 Nosotros
               </Link>
             </li>
-            <li className="navbar_item">
-              <Link className="navbar_link" to="#">
-                <MdOutlineContactSupport className="m-2" />
-                Contacto
-              </Link>
+            <li className="navbar_item" >
+              <Link className="navbar_link" to="/contacto"><MdOutlineContactSupport className="m-2"/>Contacto</Link>
             </li>
             <li className="navbar_item">
               <Link className="navbar_link" to="#">
@@ -113,11 +110,8 @@ const Navbar = () => {
                 Nosotros
               </Link>
             </li>
-            <li className="navbar_item">
-              <Link className="navbar_link" to="#">
-                <MdOutlineContactSupport className="m-2" />
-                Contacto
-              </Link>
+            <li className="navbar_item" >
+              <Link className="navbar_link" to="/contacto"><MdOutlineContactSupport className="m-2"/>Contacto</Link>
             </li>
             <li className="navbar_item">
               <Link className="navbar_link" to="#">
