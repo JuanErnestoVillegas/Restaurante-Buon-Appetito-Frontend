@@ -60,7 +60,7 @@ const AboutUs = () => {
             <figure>
               <img src={GastonImg} />
               <div className="image__overlay image__overlay--primary">
-                <div className="image__title">Devails, Gastón</div>
+                <div className="image__title">Devalis, Gastón</div>
                 <p className="image__description">
                   Hobby: <br />
                   Hacer deportes

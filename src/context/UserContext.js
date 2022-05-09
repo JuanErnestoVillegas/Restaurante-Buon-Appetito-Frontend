@@ -7,7 +7,6 @@ const UserProvider = ({children}) => {
     const [user,setUser] = useState(null);
     const [auth, setAuth] = useState(false);
     const [token, setToken] = useState(null);
-    const [password, setPassword] = useState(null); 
     const navigate = useNavigate();    
     
     const login = async (values)=>{
@@ -52,9 +51,7 @@ const UserProvider = ({children}) => {
         if(!response){
             console.log(response);
               console.log('EL USUARIO NO EXISTE');
-
-        }
-          // setPassword(response.data.user.password); 
+        }        
       } catch (error) {
         console.log(error);
       }      

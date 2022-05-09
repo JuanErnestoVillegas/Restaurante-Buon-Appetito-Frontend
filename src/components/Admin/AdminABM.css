@@ -1,3 +1,9 @@
+.admin {
+    height: 100vh;
+    padding: auto;
+    margin: auto;
+}
+
 .selected{
     background-color: var(--green-pantone);
 }

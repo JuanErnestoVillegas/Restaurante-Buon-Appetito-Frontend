@@ -2,7 +2,7 @@ import React, {useState, useContext} from "react";
 import { Modal, Button, FloatingLabel, Form, Alert } from "react-bootstrap";
 import axiosClient from "../../config/axiosClient";
 import { REGISTER_VALUES } from "../../constants";
-import { validateRegister } from '../../helpers/validations';
+import { validationRegister } from '../../helpers/validations';
 import useForm from "../../hooks/useForm";
 import "./ModalRegister.css";
 import { UserContext } from "../../context/UserContext";
@@ -18,7 +18,7 @@ const sweetalert2 = (titulo, msj) =>{
 }
 
 const ModalRegister = ({ show, handleClose, setUsers, users }) => {
-  // const [errorsR, setErrorsR] = useState(null); 
+  
   const {auth, user} = useContext(UserContext);
   
   const addUser = async (info) => {
@@ -32,8 +32,7 @@ const ModalRegister = ({ show, handleClose, setUsers, users }) => {
     }
   };
 
-  // const { handleSubmit, handleKeyUp } = useForm(REGISTER_VALUES, addUser);
-   const { handleSubmit, handleKeyUp, values, errors } = useForm(REGISTER_VALUES, addUser, validateRegister);
+  const { handleSubmit, handleKeyUp, values, errors } = useForm(REGISTER_VALUES, addUser, validationRegister);
 
   return (
     <Modal show={show} onHide={handleClose}>

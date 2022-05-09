@@ -47,6 +47,7 @@ const RegisterForm = () => {
 
   return (
     <>
+     <div className="register">
       <Container className="right-block">
         <Button variant="success" onClick={handleShow} className="m-3">
           Agregar Usuario
@@ -54,7 +55,6 @@ const RegisterForm = () => {
         <Button variant="danger" onClick={deleteUser}>
           Borrar Usuario
         </Button>
-        {/* <Button variant="warning" onClick={handleShowEdit} className='m-3'>Editar Usuario</Button> */}
         <Table striped bordered hover>
           <thead>
             <tr>
@@ -114,6 +114,7 @@ const RegisterForm = () => {
         />
         <ModalEditRegister show={showEdit} handleClose={handleCloseEdit} selected={selected} getUsers={getUsers}/>
       </Container>
+      </div>
     </>
   );
 };
