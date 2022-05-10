@@ -8,10 +8,8 @@ const Admin = () => {
   console.log(user);
     return (
     
-      <Container className="mt-5">
-        <br />
+      <Container className="mt-2">
         <h1>Tabla de Administracion</h1>
-        
        <AdminABM />
       </Container>
     
