@@ -6,12 +6,9 @@ import { UserContext } from '../../context/UserContext';
 import axiosClient from "../../config/axiosClient";
 import {RECOVER_VALUES} from '../../constants';
 import {validationMail} from '../../helpers/validations';  
-// import mail from '../mail';
 
 import useForm from "../../hooks/useForm";
 import './RecoverForm.css';
-
-
 
 const RecoverForm = () =>{
   const sweetalert2 = (titulo, msj) =>{
@@ -26,10 +23,7 @@ const RecoverForm = () =>{
   const [error, setError] = useState(null); 
   const navigate = useNavigate();
   const {getPassword} = useContext(UserContext);
-  // const {getPassword} = useContext(UserContext);
-
-  let existe = false;
-  
+    
   const verificarMail = async (values) =>{
      try {      
       console.log(values);
@@ -40,6 +34,7 @@ const RecoverForm = () =>{
           sweetalert2('Error', 'El usuario no está registrado con ese email.');        
       } else{
         sweetalert2('OK', 'El email fue enviado.');
+        navigate('/login');
       }
       
     } catch (error) {

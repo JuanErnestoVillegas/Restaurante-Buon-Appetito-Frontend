@@ -43,7 +43,7 @@ function App() {
                 <Route path="/aboutUs" element={<AboutUs />} />                
                 <Route path="/product/:id" element={<PrivateRoute><ProductDetail /></PrivateRoute>}/>
                 <Route path="/mail" element={<Mail />} />
-                <Route path="/error" element={<ErrorPage />} />
+                <Route path="/errorPage" element={<ErrorPage />} />
               </Routes>
             </Layout>
           </ProductsProvider>

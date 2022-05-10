@@ -4,6 +4,7 @@ import axiosClient from "../../config/axiosClient";
 import {Form, Button, Row, Col} from "react-bootstrap";
 import { CONTACT_VALUES } from '../../constants';
 import './ContactForm.css';
+import { validationContact } from "../../helpers/validations";
 
 const ContactForm = () =>{
   const [setUsers] = useState([]);
@@ -19,20 +20,28 @@ const ContactForm = () =>{
     }
   };
 
+  // const addUser = async (info) => {
+  //   try {
+  //     const response = await axiosClient.post("/users", info);
+  //     console.log(response.data);
+  //     setUsers([...users, response.data.useradd]);  
+  //   } catch (error) {
+  //     console.log(error.response.data.msg);               
+  //     sweetalert2("Error", error.response.data.msg);
+  //   }
+  // };
 
   useEffect(() => {
     getUsers();
   }, []);
 
-const { handleKeyUp, handleSubmit, values, errors} = useForm(CONTACT_VALUES, login, validationLogin) 
-
-
-  
+//  const { handleKeyUp, handleSubmit, values, errors} = useForm(CONTACT_VALUES, login, validationContact) 
+ 
   return (
     <div className="background-contact">
       <div className="contact-portada">
         <div className="contact-portada-text">
-          <Form onSubmit={handleSubmit}>
+          {/* <Form onSubmit={handleSubmit}>
             <Row>
               <Col>
                  <Form.Control
@@ -75,7 +84,7 @@ const { handleKeyUp, handleSubmit, values, errors} = useForm(CONTACT_VALUES, log
             >
               ENVIAR FORMULARIO
             </Button>
-          </Form>
+          </Form> */}
           ;
         </div>
       </div>

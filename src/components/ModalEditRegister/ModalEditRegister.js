@@ -20,9 +20,6 @@ const ModalEditRegister = ({show, handleClose,selected, getUsers}) => {
 
   const updateUser = async (info) =>{
     try {
-      //? Forma alternativa de hacerlo
-      // const response = await axiosClient.put('/coins/'+selected,info);
-      // setCoins([...coins.filter(coin=>coin._id!=selected),response.data.coinUpdated]);
       await axiosClient.put('/users/'+selected,info);
       getUsers();
     } catch (error) {
@@ -32,7 +29,9 @@ const ModalEditRegister = ({show, handleClose,selected, getUsers}) => {
   useEffect(()=>{
     getUser();
   },[selected])
-  const {values, setValues, handleSubmit, handleKeyUp} = useForm(REGISTER_VALUES,updateUser)
+
+  const {values, setValues, handleSubmit, handleKeyUp} = useForm(REGISTER_VALUES, updateUser)
+  
   return ( 
     <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
