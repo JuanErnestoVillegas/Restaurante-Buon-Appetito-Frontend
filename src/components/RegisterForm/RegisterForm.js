@@ -32,10 +32,8 @@ const RegisterForm = () => {
   };
 
   const deleteUser = async () => {
-    try {
-      // await axiosClient.delete("users",{id:selected});
-      await axiosClient.delete("users/"+selected);
-      console.log('BORRADO',selected );
+    try {      
+      await axiosClient.delete("users/"+selected);      
       setUsers(users.filter((user) => user._id != selected));
 
     } catch (error) {
