@@ -1,31 +1,69 @@
 import React, {useState, useContext} from "react";
 import { Modal, Button, FloatingLabel, Form, Alert } from "react-bootstrap";
+import { Link, useNavigate } from 'react-router-dom';
 import axiosClient from "../../config/axiosClient";
 import { REGISTER_VALUES } from "../../constants";
 import { validationRegister } from '../../helpers/validations';
 import useForm from "../../hooks/useForm";
-import "./ModalRegister.css";
 import { UserContext } from "../../context/UserContext";
 import Swal from "sweetalert2";
+import "./ModalRegister.css";
 
 
-const sweetalert2 = (titulo, msj) =>{
-  Swal.fire({
-    title: titulo,
-    html: msj,
-   })
-
-}
 
 const ModalRegister = ({ show, handleClose, setUsers, users }) => {
   
   const {auth, user} = useContext(UserContext);
+  const navigate = useNavigate();
+
+  const sweetalert2 = (titulo, msj) =>{
+    let timerInterval;
+    Swal.fire({
+      title: titulo,
+      html: msj,
+      timer: 1000,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading()
+        const b = Swal.getHtmlContainer().querySelector('b')
+        timerInterval = setInterval(() => {          
+        }, 100)
+      },
+      willClose: () => {
+        clearInterval(timerInterval)
+      }
+    }).then((result) => {
+      if (result.dismiss === Swal.DismissReason.timer) {
+        
+      }
+    })
   
+  }  
+  
+  const enviarMail = async (values) =>{
+    try {      
+     console.log(values);
+     const response = await axiosClient.post("/users/mailsus", values);
+     console.log(response.data);   
+     if (!response.data.isEmailSend) {
+         sweetalert2('Error', 'No se pudo enviar el mail.');        
+     } else{
+       sweetalert2('OK', 'Registrado con éxito.');
+       navigate('/');
+     }
+     
+   } catch (error) {
+     console.log(error);        
+   }
+  }
+
+
   const addUser = async (info) => {
     try {
       const response = await axiosClient.post("/users", info);
       console.log(response.data);
-      setUsers([...users, response.data.useradd]);  
+      setUsers([...users, response.data.useradd]); 
+      enviarMail(info);
     } catch (error) {
       console.log(error.response.data.msg);               
       sweetalert2("Error", error.response.data.msg);

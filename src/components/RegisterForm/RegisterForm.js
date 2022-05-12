@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { Container, Table, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import axiosClient from "../../config/axiosClient";
-import Mail from '../mail';
 import ModalRegister from '../ModalRegister/ModalRegister';
 import ModalEditRegister from "../ModalEditRegister/ModalEditRegister";
 import './RegisterForm.css'
@@ -34,8 +33,11 @@ const RegisterForm = () => {
 
   const deleteUser = async () => {
     try {
-      await axiosClient.delete("users",{id:selected});
+      // await axiosClient.delete("users",{id:selected});
+      await axiosClient.delete("users/"+selected);
+      console.log('BORRADO',selected );
       setUsers(users.filter((user) => user._id != selected));
+
     } catch (error) {
       console.log(error);
     }

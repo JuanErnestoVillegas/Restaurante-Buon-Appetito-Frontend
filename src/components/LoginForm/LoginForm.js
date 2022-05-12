@@ -42,8 +42,7 @@ const LoginForm = () =>{
       didOpen: () => {
         Swal.showLoading()
         const b = Swal.getHtmlContainer().querySelector('b')
-        timerInterval = setInterval(() => {
-          b.textContent = Swal.getTimerLeft()
+        timerInterval = setInterval(() => {          
         }, 100)
       },
       willClose: () => {
