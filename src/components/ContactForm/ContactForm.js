@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {Form, Button, Row, Col, Alert} from "react-bootstrap";
 import { CONTACT_VALUES } from '../../constants';
 import { validationContact } from "../../helpers/validations";
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axiosClient from "../../config/axiosClient";
 import useForm from "../../hooks/useForm";
 import Swal from "sweetalert2";
@@ -65,7 +65,7 @@ const ContactForm = () =>{
 
   const enviar = (values) => {
 
-      if ((name.values !='') && (lastname.values !='') && (email.values !='') && (message.values !='')) {
+      if ((name.values !=='') && (lastname.values !=='') && (email.values !=='') && (message.values !=='')) {
           //envio mail
           enviarMail(values);
           sweetalert2('OK', 'Su consulta fue enviada.');

@@ -1,5 +1,5 @@
 import React, {useEffect , useContext} from "react";
-import { Modal, Button, FloatingLabel, Form } from "react-bootstrap";
+import { Modal, Button, FloatingLabel, Form, Alert } from "react-bootstrap";
 import axiosClient from "../../config/axiosClient";
 import { REGISTER_VALUES } from "../../constants";
 import useForm from "../../hooks/useForm";
@@ -31,7 +31,7 @@ const ModalEditRegister = ({show, handleClose,selected, getUsers}) => {
   },[selected])
 
   const {values, setValues, handleSubmit, handleKeyUp} = useForm(REGISTER_VALUES, updateUser)
-  
+
   return ( 
     <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
@@ -97,7 +97,7 @@ const ModalEditRegister = ({show, handleClose,selected, getUsers}) => {
           </FloatingLabel>
  
              {
-          user?.role=='ADMIN'?          
+          user?.role==='ADMIN'?          
               <Form.Select name="role" id="roleSelect" onChange={handleKeyUp}>
               <option value="USER">USER</option>
               <option value="ADMIN">ADMIN</option>
@@ -110,7 +110,7 @@ const ModalEditRegister = ({show, handleClose,selected, getUsers}) => {
               <option value="USER">USER</option>            
             </Form.Select>
           }
-          <Button className="primary-button" type="submit" onClick={handleClose}> Editar</Button>
+          <Button className="primary-button" type="submit" onClick={handleClose}> Editar</Button>      
         </form>
         </Modal.Body>
       </Modal>
