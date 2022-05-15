@@ -14,7 +14,6 @@ import PrivateRoute from "./routes/PrivateRoute";
 import ProductsProvider from "./context/ProductsContext";
 import ProductDetail from "./pages/ProductDetail";
 import Products from "./pages/Products";
-import Mail from "./components/mail";
 import ContactForm from "./components/ContactForm/ContactForm";
 import ProductCarrito from "./components/ProductsCarrito/ProductCarrito";
 import ErrorPage from "./pages/ErrorPage";
@@ -41,7 +40,6 @@ function App() {
                 <Route path="/productsCarrito" element={<ProductsCarrito />} />
                 <Route path="/aboutUs" element={<AboutUs />} />                
                 <Route path="/product/:id" element={<PrivateRoute><ProductDetail /></PrivateRoute>}/>
-                <Route path="/mail" element={<Mail />} />
                 <Route path="/errorPage" element={<ErrorPage />} />
               </Routes>
             </Layout>

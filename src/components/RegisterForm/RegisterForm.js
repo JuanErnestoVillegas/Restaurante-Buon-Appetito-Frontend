@@ -2,9 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Container, Table, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import axiosClient from "../../config/axiosClient";
-import Mail from '../mail';
 import ModalRegister from '../ModalRegister/ModalRegister';
 import ModalEditRegister from "../ModalEditRegister/ModalEditRegister";
 import './RegisterForm.css'
@@ -33,9 +31,10 @@ const RegisterForm = () => {
   };
 
   const deleteUser = async () => {
-    try {
-      await axiosClient.delete("users",{id:selected});
-      setUsers(users.filter((user) => user._id != selected));
+    try {      
+      await axiosClient.delete("users/"+selected);      
+      setUsers(users.filter((user) => user._id !== selected));
+
     } catch (error) {
       console.log(error);
     }
@@ -68,7 +67,7 @@ const RegisterForm = () => {
           <tbody>
 
             {users.map((user) =>
-              user._id == selected ? (
+              user._id === selected ? (
                 <tr
                   key={user._id}
                   onClick={() => setSelected(user._id)}

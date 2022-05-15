@@ -92,5 +92,8 @@ export const validationContact = (values)=> {
   } else if(values.email.lenght >30 ){
     errors.email='El email no puede tener más de 30 caracteres.';
   }
+  if (values.message.length < 4 ) {
+    errors.message = 'Escriba una consulta válida.';
+}
   return errors;
 }
