@@ -18,6 +18,7 @@ import ContactForm from "./components/ContactForm/ContactForm";
 import ProductCarrito from "./components/ProductsCarrito/ProductCarrito";
 import ErrorPage from "./pages/ErrorPage";
 import ProductsCarrito from "./components/Products/Products";
+import ProductCard from "./components/ProductCard/ProductCard";
 // import RecoverForm from "./components/RecoverForm/RecoverForm"
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
                 <Route path="/recover" element={<Recover/>} />
                 <Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} />
                 <Route path="/products" element={<PrivateRoute><Products /></PrivateRoute>} />
+                <Route path="/productCard" element={<ProductCard />} />
                 <Route path="/carrito" element={<CartPage />} />
                 <Route path="/productCarrito" element={<ProductCarrito />} />
                 <Route path="/productsCarrito" element={<ProductsCarrito />} />

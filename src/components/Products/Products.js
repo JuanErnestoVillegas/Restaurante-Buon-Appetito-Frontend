@@ -11,13 +11,21 @@ const useStyles = makeStyles((theme) => ({
  
 }));
 
-export default function ProductsCarrito({ id, title, description, price }) {
+
+
+export default function ProductsCarrito() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={4}>
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={12} lg={12}>
+          <ProductCarrito/>
+        </Grid>
         <Grid item xs={12} sm={6} md={4} lg={3}>
+          <ProductCarrito />
+        </Grid>
+        {/* <Grid item xs={12} sm={6} md={4} lg={3}>
           <ProductCarrito />
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={3}>
@@ -31,13 +39,7 @@ export default function ProductsCarrito({ id, title, description, price }) {
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={3}>
           <ProductCarrito />
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={3}>
-          <ProductCarrito />
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={3}>
-          <ProductCarrito />
-        </Grid>
+        </Grid> */}
       </Grid>
     </div>
   );

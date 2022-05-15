@@ -14,6 +14,7 @@ import Napolitana from "../../assets/img/Napolitana.jpg";
 import BuonAppetito from "../../assets/Logo/BuonAppetito.jpg"
 import accounting from "accounting"
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import "./ProductCarrito.css";
  
 
 const ExpandMore = styled((props) => {
@@ -27,7 +28,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function ProductCarrito() {
+const ProductCarrito = ({id, title, description, price,image}) => {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -35,29 +36,30 @@ export default function ProductCarrito() {
   };
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card id={id} sx={{ maxWidth: 345 }} className="card">
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe" src={BuonAppetito}>
-          </Avatar>
+          <Avatar
+            sx={{ bgcolor: red[500] }}
+            aria-label="recipe"
+            src={BuonAppetito}
+          ></Avatar>
         }
         action={
           <IconButton aria-label="settings">
-             {accounting.formatMoney (900, "$")}
+            {accounting.formatMoney(price, "$")}
           </IconButton>
         }
-        title="Pizza Napolitana"
-        subheader="Grande - 8 porciones"
+        title={title}
+        subheader="Grande - 8 Porciones"
       />
       <CardMedia
         component="img"
         height="194"
-        image={Napolitana}
-        alt="Pizza Napolitana"
+        image={image}
+        alt={title}
       />
-      <CardContent>
-       Descripcion del Producto
-      </CardContent>
+      <CardContent>{description}</CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
           <AddShoppingCartIcon />
@@ -74,9 +76,11 @@ export default function ProductCarrito() {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-         Mas informacion de la Pizza
+          Mas informacion de la Pizza
         </CardContent>
       </Collapse>
     </Card>
   );
 }
+
+export default ProductCarrito;

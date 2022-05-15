@@ -77,7 +77,7 @@ const AdminABM = () => {
                   <td>{product.name}</td>
                   <td>{product.description}</td>
                   <td>
-                    <Card.Img variant="top" className="card-m" src={pizza} />
+                    <Card.Img variant="top" className="card-m" src={product.image} />
                   </td>
                   <td>{product.price}</td>
                   <td>
@@ -96,7 +96,7 @@ const AdminABM = () => {
                   <td>{product.name}</td>
                   <td>{product.description}</td>
                   <td>
-                    <Card.Img variant="top" className="card-m" src={pizza} />
+                    <Card.Img variant="top" className="card-m" src={product.image} />
                   </td>
                   <td>{product.price}</td>
                   <td>

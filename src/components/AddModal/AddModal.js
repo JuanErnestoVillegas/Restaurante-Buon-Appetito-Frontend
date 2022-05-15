@@ -62,6 +62,7 @@ const AddModal = ({ show, handleClose, setProducts, products }) => {
               className=""
             />
           </FloatingLabel>
+          
           <FloatingLabel
             controlId="floatingPassword"
             label="Imagen"
