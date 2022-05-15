@@ -1,19 +1,29 @@
-import './Error404.css'
-import { Button } from 'react-bootstrap'
-import { useNavigate } from 'react-router-dom'
+import "./Error404.css";
+import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import error_404 from "../../assets/img/404/error_404.png";
 
 const Error404 = () => {
-    const Navigate = useNavigate ();
+  const Navigate = useNavigate();
 
-    return (
-        <div>
-            <img src="https://cdn.dribbble.com/users/877246/screenshots/6054160/media/4aea60454c2b30dea6b35a8c6ed739ea.png?compress=1&resize=400x300"></img>
-            <p>Lo sentimos, la pagina que busca no esta disponible</p>
-            <Button variant="secondary" onClick={() => Navigate('/')} >
-                Volver al Inicio
-            </Button>
-        </div>
-    )
-}
+  return (
+    <div className="background_error">
+      <div className="error404 ">
+        <img src={error_404}></img>
+        <p className="text_error mx-2">
+          Lo sentimos, la página esta en reparación! <br /> Vuela al Inicio!
+        </p>
 
-export default Error404
+        <Button
+          variant="secondary"
+          className="mx-5"
+          onClick={() => Navigate("/")}
+        >
+          Volver al Inicio
+        </Button>
+      </div>
+    </div>
+  );
+};
+
+export default Error404;
