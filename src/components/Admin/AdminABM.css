@@ -1,0 +1,15 @@
+.selected {
+    background-color: var(--green-pantone);
+}
+
+.products {
+    cursor: pointer;
+}
+
+.boton {
+    background-color: var(--green-pantone);
+}
+
+.card-m {
+    width: 10rem !important;
+}

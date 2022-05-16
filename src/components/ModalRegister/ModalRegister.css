@@ -1,0 +1,9 @@
+.modal-boton{
+    background-color: var(--green-pantone) !important;
+    border-color: var(--green-pantone) !important;
+}
+
+.floating{
+   color: red !important;
+
+}

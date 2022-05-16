@@ -1,0 +1,19 @@
+.card:hover{
+   box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.7) !important;
+   transition: all 0.7s linear; 
+}
+.card{
+    margin-top: 15px;
+    margin-block-end: 15px;
+}
+.card-top:hover{
+    transform: scale(0.3);
+    transition: all 0.4s ease-in-out;
+
+}
+
+.cardContainer{
+    display: flex;
+    justify-content: center;
+}
+

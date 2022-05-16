@@ -1,0 +1,21 @@
+:root {
+    --old-mauve: #531D35ff;
+    --gold-crayola: #E5C697ff;
+    --indian-yellow: #D49B4Eff;
+    --carnelian: #A8231Eff;
+    --gunmetal: #202932ff;
+    --burnt-umber: #8F3220ff;
+    --copper: #C57337ff;
+    --saddle-brown: #935A2Fff;
+    --dark-moss-green: #4C5B24ff;
+    --rust: #B34D25ff;
+    --imperial-red: #E13D3D;
+    --green-pantone: #22A428;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
