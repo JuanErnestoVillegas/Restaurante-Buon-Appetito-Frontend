@@ -1,10 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
-
-div {
-    text-align: center;
+.background_error {
+    background-image: url("./../../assets/img/spaghetti-with-tomatopan.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
 }
 
-p {
-    font-family: 'Italianno', cursive;
-    font-size: 50px;
+.error404 {
+    height: auto;
+    width: auto;
+    padding-bottom: 3rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_error {
+    font-family: "MonteCarlo", cursive;
+    font-size: 40px;
+    color: rgb(255, 255, 255)
 }

@@ -11,7 +11,7 @@ form {
     background-image: url("./../../assets/img/pizza-3007395_1280.jpg");
     background-size: cover;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,8 +36,8 @@ form {
 
 .contact-icon {
     color: var(--gunmetal);
-    font-size: 55px;
-    margin-top: 8px;
+    font-size: 40px;
+    margin: 8px;
 }
 
 .contact-input {

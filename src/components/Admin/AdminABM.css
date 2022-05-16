@@ -1,21 +1,15 @@
-.admin {
-    height: 100vh;
-    padding: auto;
-    margin: auto;
-}
-
-.selected{
+.selected {
     background-color: var(--green-pantone);
 }
 
-.products{
+.products {
     cursor: pointer;
 }
 
-.boton{
+.boton {
     background-color: var(--green-pantone);
 }
 
-.card-m{
+.card-m {
     width: 10rem !important;
 }
