@@ -44,7 +44,7 @@ const AdminABM = () => {
   return (
     <>
     <div className="admin">
-      <Container className="right-block">
+      <Container>
         <Button variant="success" onClick={handleShow} className="m-3">
           Agregar Productos
         </Button>
