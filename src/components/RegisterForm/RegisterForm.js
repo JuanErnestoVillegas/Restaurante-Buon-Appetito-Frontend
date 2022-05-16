@@ -48,7 +48,7 @@ const RegisterForm = () => {
   return (
     <>
      <div className="register">
-      <Container className="right-block">
+      <Container >
         <Button variant="success" onClick={handleShow} className="m-3">
           Agregar Usuario
         </Button>

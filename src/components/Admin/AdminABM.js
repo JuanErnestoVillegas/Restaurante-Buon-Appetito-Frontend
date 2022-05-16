@@ -43,8 +43,9 @@ const AdminABM = () => {
 
   return (
     <>
-    <div className="admin">
-      <Container className="right-block">
+    
+    <h1>Tabla de Administracion</h1>  
+      <Container >
         <Button variant="success" onClick={handleShow} className="m-3">
           Agregar Productos
         </Button>
@@ -122,7 +123,7 @@ const AdminABM = () => {
           getProducts={getProducts}
         />
       </Container>
-      </div>
+      
     </>
   );
 };
