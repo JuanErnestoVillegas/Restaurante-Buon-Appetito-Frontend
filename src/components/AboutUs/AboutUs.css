@@ -1,7 +1,10 @@
-.aboutUs {
+
+.aboutUs {   
     height: 100vh;
     padding: auto;
-    margin: auto;
+    margin: 0;
+    width: auto;
+
 }
 
 .content-all {
