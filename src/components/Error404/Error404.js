@@ -1,7 +1,9 @@
+
 import "./Error404.css";
 import { Container, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import error_404 from "../../assets/img/404/error_404.png";
+
 
 const Error404 = () => {
   const Navigate = useNavigate();

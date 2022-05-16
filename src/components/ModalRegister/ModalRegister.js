@@ -1,6 +1,6 @@
-import React, {useState, useContext} from "react";
+import React, { useContext} from "react";
 import { Modal, Button, FloatingLabel, Form, Alert } from "react-bootstrap";
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axiosClient from "../../config/axiosClient";
 import { REGISTER_VALUES } from "../../constants";
 import { validationRegister } from '../../helpers/validations';
@@ -145,7 +145,7 @@ const ModalRegister = ({ show, handleClose, setUsers, users }) => {
             />
           </FloatingLabel>  
              {
-          user?.role=='ADMIN'?          
+          user?.role==='ADMIN'?          
               <Form.Select name="role" id="roleSelect" onChange={handleKeyUp}>
               <option value="USER">USER</option>
               <option value="ADMIN">ADMIN</option>

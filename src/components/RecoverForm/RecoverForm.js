@@ -1,8 +1,7 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import {Form, Button, Alert} from 'react-bootstrap';
 import Swal from "sweetalert2";
-import { Link, useNavigate } from 'react-router-dom';
-import { UserContext } from '../../context/UserContext';
+import { useNavigate } from 'react-router-dom';
 import axiosClient from "../../config/axiosClient";
 import {RECOVER_VALUES} from '../../constants';
 import {validationMail} from '../../helpers/validations';  
@@ -22,8 +21,7 @@ const RecoverForm = () =>{
 
   const [error, setError] = useState(null); 
   const navigate = useNavigate();
-  const {getPassword} = useContext(UserContext);
-    
+     
   const verificarMail = async (values) =>{
      try {      
       console.log(values);
