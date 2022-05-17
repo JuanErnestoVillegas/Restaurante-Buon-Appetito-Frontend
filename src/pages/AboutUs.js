@@ -3,7 +3,7 @@ import AboutUs from "../components/AboutUs/AboutUs";
 
 const Nosotros = () => {
   return (
-    <Container >
+    <Container fluid={true}>
       <AboutUs />
     </Container>
   );

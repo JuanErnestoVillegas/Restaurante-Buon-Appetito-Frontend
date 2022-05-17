@@ -1,10 +1,8 @@
 
  .aboutUs {   
     height: 100vh;
-    padding: auto;
     margin: 0;
-    width: auto;
-
+    width: 100vw;
 } 
 
 .content-all {
@@ -31,8 +29,9 @@
 }
 
 .content-carrousel {
-    width: 100%;
-    position: absolute;
+    width: auto;
+    flex: auto;
+    position: relative;
     animation: rotar 10s infinite linear;
     transform-style: preserve-3d;
 }
@@ -179,7 +178,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: 130vh;
-        width: 100vw;   
+        width: auto;   
         height: 720px;
     } 
     p {

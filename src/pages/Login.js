@@ -5,7 +5,7 @@ const Login = () => {
   return (
     <>
 
-      <Container>
+      <Container fluid={true} className="p-0">
         <LoginForm />
       </Container>
 
