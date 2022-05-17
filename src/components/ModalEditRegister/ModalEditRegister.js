@@ -28,12 +28,14 @@ const ModalEditRegister = ({show, handleClose,selected, getUsers}) => {
         if (values.name.length < 3 || values.name.length >15) {
             errors.name = 'El nombre debe tener entre 3 y 15 letras';
         }
+        values.name = values.name.replace(/(^\w{1})|(\s+\w{1})/g, letra => letra.toUpperCase());
         if (!values.lastname) {
             errors.name = 'Apellido requerido';
         } 
         if (values.lastname.length < 3 || values.lastname.length >20) {
             errors.name = 'El apellido debe tener entre 3 y 20 letras';
         }
+        values.lastname = values.lastname.replace(/(^\w{1})|(\s+\w{1})/g, letra => letra.toUpperCase());
         if(!values.email){
           errors.email='Campo Email obligatorio.'
         } else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)){
