@@ -1,8 +1,9 @@
-.aboutUs {
+
+ .aboutUs {   
     height: 100vh;
-    padding: auto;
-    margin: auto;
-}
+    margin: 0;
+    width: 100vw;
+} 
 
 .content-all {
     width: 200px;
@@ -28,8 +29,9 @@
 }
 
 .content-carrousel {
-    width: 100%;
-    position: absolute;
+    width: auto;
+    flex: auto;
+    position: relative;
     animation: rotar 10s infinite linear;
     transform-style: preserve-3d;
 }
@@ -172,13 +174,13 @@
 }
 
 @media screen and (max-width: 360px) {
-    body {
+     body {
         background-position: center;
         background-repeat: no-repeat;
         background-size: 130vh;
-        width: 100vw;
+        width: auto;   
         height: 720px;
-    }
+    } 
     p {
         width: 340px;
         font-size: clamp(1rem, 1vw, 1.8rem);

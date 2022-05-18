@@ -2,7 +2,6 @@
         position: relative;
         width: 100%;
         height: 90vh;
-        font-family: 'Montserrat', sans-serif;
     }
     
     .hero_image {
@@ -10,6 +9,7 @@
         height: 100%;
         object-fit: cover;
         position: relative;
+        
     }
     
     .hero_title {

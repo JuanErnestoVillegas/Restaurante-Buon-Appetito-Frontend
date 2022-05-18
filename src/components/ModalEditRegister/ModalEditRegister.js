@@ -5,6 +5,8 @@ import { REGISTER_VALUES } from "../../constants";
 import useForm from "../../hooks/useForm";
 import { UserContext } from "../../context/UserContext";
 
+let errors = {};
+
 const ModalEditRegister = ({show, handleClose,selected, getUsers}) => {
     const {auth, user} = useContext(UserContext);
 
@@ -18,13 +20,52 @@ const ModalEditRegister = ({show, handleClose,selected, getUsers}) => {
         }
       };
 
+  const validationEditReg = (values)=> {        
+        
+        if (!values.name) {
+            errors.name = 'Nombre requerido';
+        } 
+        if (values.name.length < 3 || values.name.length >15) {
+            errors.name = 'El nombre debe tener entre 3 y 15 letras';
+        }
+        values.name = values.name.replace(/(^\w{1})|(\s+\w{1})/g, letra => letra.toUpperCase());
+        if (!values.lastname) {
+            errors.name = 'Apellido requerido';
+        } 
+        if (values.lastname.length < 3 || values.lastname.length >20) {
+            errors.name = 'El apellido debe tener entre 3 y 20 letras';
+        }
+        values.lastname = values.lastname.replace(/(^\w{1})|(\s+\w{1})/g, letra => letra.toUpperCase());
+        if(!values.email){
+          errors.email='Campo Email obligatorio.'
+        } else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)){
+          errors.email='El email no es válido.';
+        } else if(values.email.lenght >30 ){
+          errors.email='El email no puede tener más de 30 caracteres.';
+        }
+        if (!values.password) {
+            errors.password = 'Contraseña requerida';
+        } 
+        if (values.password.length < 3 || values.password.length > 16) {
+            errors.password = 'La contraseña debe tener entre 3 y 16 caracteres';
+        }  
+        if (!values.role) {
+          errors.role = 'Rol requerido';
+      } 
+        return errors;
+    }
+
+
   const updateUser = async (info) =>{
+    validationEditReg(info);
+    if(Object.keys(errors).length === 0){
     try {
       await axiosClient.put('/users/'+selected,info);
       getUsers();
     } catch (error) {
       console.log(error);
     }
+  }
   }
   useEffect(()=>{
     getUser();
@@ -110,7 +151,16 @@ const ModalEditRegister = ({show, handleClose,selected, getUsers}) => {
               <option value="USER">USER</option>            
             </Form.Select>
           }
-          <Button className="primary-button" type="submit" onClick={handleClose}> Editar</Button>      
+          <Button className="primary-button" type="submit" onClick={handleClose}> Editar</Button>  
+          <div className="errors">
+            {Object.keys(errors).length === 0
+              ? null
+              : Object.values(errors).map((error, index) => (
+                  <Alert key={index} variant="danger" className="mt-0">
+                    {error}
+                  </Alert>
+                ))}
+          </div>    
         </form>
         </Modal.Body>
       </Modal>

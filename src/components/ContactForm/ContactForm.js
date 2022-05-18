@@ -5,6 +5,7 @@ import { validationContact } from "../../helpers/validations";
 import { useNavigate } from 'react-router-dom';
 import axiosClient from "../../config/axiosClient";
 import useForm from "../../hooks/useForm";
+import {MdOutlineContactSupport} from "react-icons/md";
 import Swal from "sweetalert2";
 import './ContactForm.css';
 
@@ -84,9 +85,11 @@ const ContactForm = () =>{
  
   return (
     <div className="background-contact">
-      <div className="contact-portada">
+      <div className="contact-portada d-flex justify-content-center aling-items-center">
         <div className="contact-portada-text">
           <Form onSubmit={handleSubmit}>
+          <MdOutlineContactSupport className="contact-icon text-reset" />
+
             <Row>
               <Col>
                  <Form.Control

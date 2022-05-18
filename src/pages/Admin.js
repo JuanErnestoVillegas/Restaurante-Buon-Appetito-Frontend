@@ -12,6 +12,7 @@ const Admin = () => {
         <h1>Tabla de Administracion</h1>
        <AdminABM />
       </Container>
+
     
   );
 };

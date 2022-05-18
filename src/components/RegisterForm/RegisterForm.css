@@ -1,12 +1,4 @@
-.right-block{
-    width: 100%;
-    height: 80vh;
-    margin-top: 40vh;
-
-}
-
-.register {
-    height: auto;
-    padding: auto;
-    margin: auto;
-}
+      .register {
+          width: 100%;
+          height: 100%;
+      }

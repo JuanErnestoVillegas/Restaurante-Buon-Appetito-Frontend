@@ -13,8 +13,7 @@ const AboutUs = () => {
     <ThemeProvider
   breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}
 >
-  <Container fluid>
-    <Row>
+
   <div className="aboutUs">
         <h2 className="us-title">Diseñadores de Buon Appetito</h2>
         <div className="content-all">
@@ -73,12 +72,9 @@ const AboutUs = () => {
           </div>
         </div>    
     
+        </div>
 
 
-
-  </div>
-  </Row>
-</Container>
 </ThemeProvider>
 
   );
