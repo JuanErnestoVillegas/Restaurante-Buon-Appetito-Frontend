@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useContext } from "react";
 import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
@@ -15,6 +15,11 @@ import BuonAppetito from "../../assets/Logo/BuonAppetito.jpg"
 import accounting from "accounting"
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import "./ProductCarrito.css";
+import { ActionTypes } from "@mui/base";
+import { CartContext } from "../../context/CartContext";
+import { ADD_PRODUCT_VALUES } from "../../constants";
+import Carrito from "../ShoppingCart/ShoppingCart";
+import Products from "../../pages/Products";
  
 
 const ExpandMore = styled((props) => {
@@ -30,11 +35,13 @@ const ExpandMore = styled((props) => {
 
 const ProductCarrito = ({id, title, description, price,image}) => {
   const [expanded, setExpanded] = React.useState(false);
+  const addItemToCart = useContext (CartContext);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
 
+  
   return (
     <Card id={id} sx={{ maxWidth: 345 }} className="card">
       <CardHeader
@@ -61,7 +68,7 @@ const ProductCarrito = ({id, title, description, price,image}) => {
       />
       <CardContent>{description}</CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
+        <IconButton aria-label="add to favorites" onClick={()=> addItemToCart(id)}>
           <AddShoppingCartIcon />
           Comprar
         </IconButton>

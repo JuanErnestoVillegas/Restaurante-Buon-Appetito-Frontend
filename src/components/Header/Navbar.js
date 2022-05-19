@@ -9,6 +9,14 @@ import { UserContext } from "../../context/UserContext";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import Badge from "@mui/material/Badge";
 import { red } from "@mui/material/colors";
+import Products from "../../pages/Products";
+import ProductsCarrito from "../Products/Products";
+import ProductCard from "../ProductCard/ProductCard";
+import { Card } from "@material-ui/core";
+import { CartContext } from "../../context/CartContext";
+import AdminABM from "../Admin/AdminABM";
+import { ADD_PRODUCT_VALUES } from "../../constants";
+import ProductsProvider from "../../context/ProductsContext";
 
 
 const Navbar = () => {
@@ -49,8 +57,11 @@ const Navbar = () => {
                 Nosotros
               </Link>
             </li>
-            <li className="navbar_item" >
-              <Link className="navbar_link" to="/contacto"><MdOutlineContactSupport className="m-2"/>Contacto</Link>
+            <li className="navbar_item">
+              <Link className="navbar_link" to="/contacto">
+                <MdOutlineContactSupport className="m-2" />
+                Contacto
+              </Link>
             </li>
             <li className="navbar_item">
               <Link className="navbar_link" to="#">
@@ -61,6 +72,13 @@ const Navbar = () => {
           </>
         ) : auth ? (
           <>
+            <li className="navbar_item">
+              <Link className="navbar_link" to="/carrito">
+            <Badge badgeContent={ProductsProvider?.length} color="primary">
+                  <AddShoppingCartIcon />
+                </Badge>
+              </Link>
+            </li>
             <li className="navbar_item">
               <Link className="navbar_link" to="/aboutUs">
                 <MdOutlineSocialDistance className="m-2" />
@@ -110,14 +128,10 @@ const Navbar = () => {
                 Nosotros
               </Link>
             </li>
-            <li className="navbar_item" >
-              <Link className="navbar_link" to="/contacto"><MdOutlineContactSupport className="m-2"/>Contacto</Link>
-            </li>
             <li className="navbar_item">
-              <Link className="navbar_link" to="#">
-                <Badge badgeContent={3} color="primary">
-                  <AddShoppingCartIcon />
-                </Badge>
+              <Link className="navbar_link" to="/contacto">
+                <MdOutlineContactSupport className="m-2" />
+                Contacto
               </Link>
             </li>
           </>
