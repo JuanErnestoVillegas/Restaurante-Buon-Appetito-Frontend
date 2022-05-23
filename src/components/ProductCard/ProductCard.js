@@ -5,10 +5,6 @@ import chef from "../../assets/LandingImg/chef.jpg";
 import pizza from "../../assets/LandingImg/pizza.jpg";
 
 
-
-
-
-
 const ProductCard = ({id,title,description,price}) => {
   return (
     <Card id={id} text="center" border="success" style={{ width: "18rem" }}>

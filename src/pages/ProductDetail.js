@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axiosClient from "../config/axiosClient";
 import { Col, Container, Row } from "react-bootstrap";
 import ProductCard from "../components/ProductCard/ProductCard";
+import ProductCarrito from "../components/ProductsCarrito/ProductCarrito";
 
 
 const ProductDetail = () => {
@@ -25,9 +26,9 @@ useEffect(()=>{
       <>
       
         <Container className="mt-1 cardContainer">
-          <Row xs={1} md={3} className="g-2">
+          <Row xs={12} md={12} className="g-2">
             <Col>
-              <ProductCard
+              <ProductCarrito
                 className="m-3"
                 id={product.id}
                 title={product.name}

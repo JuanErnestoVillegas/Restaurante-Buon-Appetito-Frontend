@@ -1,12 +1,16 @@
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import ProductCard from "../components/ProductCard/ProductCard"; 
 import {Row, Col } from 'react-bootstrap';
 import { Container } from "react-bootstrap";
 import axiosClient from "../config/axiosClient";
+import ProductsCarrito from "../components/Products/Products";
+import ProductCarrito from "../components/ProductsCarrito/ProductCarrito";
+import { CartContext } from "../context/CartContext";
 
 
 const Products = () => {
  const[products,setProducts] = useState([]);
+
     useEffect(()=>{
         const getProducts = async()=>{
           try{
@@ -24,10 +28,11 @@ const Products = () => {
         <Row xs={1} md={3} className="g-2">
           {products.map((product) => (
             <Col>
-              <ProductCard
+              <ProductCarrito
                 className="m-3"
                 id={product._id}
                 title={product.name}
+                price={product.price}
                 description={product.description}
                 image={product.image}
               />

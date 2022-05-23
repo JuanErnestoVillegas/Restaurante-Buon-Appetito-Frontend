@@ -44,7 +44,7 @@ const AdminABM = () => {
   return (
     <>
   
-    <h1>Tabla de Administracion</h1>  
+    
       <Container >
         <Button variant="success" onClick={handleShow} className="m-3">
           Agregar Productos
@@ -78,7 +78,7 @@ const AdminABM = () => {
                   <td>{product.name}</td>
                   <td>{product.description}</td>
                   <td>
-                    <Card.Img variant="top" className="card-m" src={pizza} />
+                    <Card.Img variant="top" className="card-m" src={product.image} />
                   </td>
                   <td>{product.price}</td>
                   <td>
@@ -97,7 +97,7 @@ const AdminABM = () => {
                   <td>{product.name}</td>
                   <td>{product.description}</td>
                   <td>
-                    <Card.Img variant="top" className="card-m" src={pizza} />
+                    <Card.Img variant="top" className="card-m" src={product.image} />
                   </td>
                   <td>{product.price}</td>
                   <td>

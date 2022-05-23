@@ -4,18 +4,22 @@ import { ADD_PRODUCT_VALUES } from "../../constants";
 import useForm from "../../hooks/useForm";
 import "./AddModal.css";
 import file from "./../../assets/img/cardspizza.jpg"
+import { useEffect } from "react";
 
-const AddModal = ({ show, handleClose, setProducts, products }) => {
+const AddModal = ({image, show, handleClose, setProducts, products }) => {
   const addProduct = async (info) => {
     try {
       const response = await axiosClient.post("/products", info);
+      setValues(response.data.product);
       console.log(response.data);
       setProducts([...products, response.data.productadd]);
     } catch (error) {
       console.log(error);
     }
   };
-  const { handleSubmit, handleKeyUp } = useForm(ADD_PRODUCT_VALUES, addProduct);
+
+
+ const { setValues, handleSubmit, handleKeyUp } = useForm(ADD_PRODUCT_VALUES, addProduct);
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
@@ -62,6 +66,7 @@ const AddModal = ({ show, handleClose, setProducts, products }) => {
               className=""
             />
           </FloatingLabel>
+
           <FloatingLabel
             controlId="floatingPassword"
             label="Imagen"
@@ -73,6 +78,7 @@ const AddModal = ({ show, handleClose, setProducts, products }) => {
               onKeyUp={handleKeyUp}
               name="image"
               className=""
+              defaultValue={image}
             />
           </FloatingLabel>
           <Button
@@ -83,7 +89,6 @@ const AddModal = ({ show, handleClose, setProducts, products }) => {
             Agregar
           </Button>
         </form>
-        
       </Modal.Body>
     </Modal>
   );
