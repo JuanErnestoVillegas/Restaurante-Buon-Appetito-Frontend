@@ -25,9 +25,6 @@ export default function ProductsCarrito() {
         <Grid item xs={12} sm={6} md={4} lg={3}>
           <ProductCarrito />
         </Grid>
-        {/* <Grid item xs={12} sm={6} md={4} lg={3}>
-          <ProductCarrito />
-        </Grid>
         <Grid item xs={12} sm={6} md={4} lg={3}>
           <ProductCarrito />
         </Grid>
@@ -39,7 +36,10 @@ export default function ProductsCarrito() {
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={3}>
           <ProductCarrito />
-        </Grid> */}
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
+          <ProductCarrito />
+        </Grid>
       </Grid>
     </div>
   );

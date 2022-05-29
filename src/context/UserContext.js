@@ -44,19 +44,6 @@ const UserProvider = ({children}) => {
       }      
     }
 
-    // const getPassword = async(values)=>{
-    //   try {
-    //      const response = await axiosClient.get('/users/', values);
-    //     console.log(values);
-    //     if(!response){
-    //         console.log(response);
-    //           console.log('EL USUARIO NO EXISTE');
-    //     }        
-    //   } catch (error) {
-    //     console.log(error);
-    //   }      
-    // }
-
     const logout = ()=>{
       setAuth(false);
       setToken(null);
@@ -74,7 +61,6 @@ const UserProvider = ({children}) => {
           auth,
           getAuth,
           logout          
-          // getPassword
         }}>
         {children}
       </UserContext.Provider>
