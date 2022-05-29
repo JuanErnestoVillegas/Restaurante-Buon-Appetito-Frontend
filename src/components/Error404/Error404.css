@@ -1,0 +1,21 @@
+.error404 {
+    justify-content: center;
+    align-items: center;
+}
+
+.text_error {
+    font-family: 'Italianno',cursive;
+    font-size: 50px;
+    color: white;
+}
+
+.background_error {
+    background-image: url("./../../assets/img/spaghetti-with-tomatopan.jpg");
+    background-size: cover;    
+    width: auto;
+    height: 78vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
