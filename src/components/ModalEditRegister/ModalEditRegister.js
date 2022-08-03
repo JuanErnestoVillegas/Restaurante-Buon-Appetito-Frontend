@@ -45,10 +45,9 @@ const ModalEditRegister = ({show, handleClose,selected, getUsers}) => {
         }
         if (!values.password) {
             errors.password = 'Contraseña requerida';
-        } 
-        if (values.password.length < 3 || values.password.length > 16) {
-            errors.password = 'La contraseña debe tener entre 3 y 16 caracteres';
-        }  
+        } else if(values.password.lenght >16 ){
+          errors.password='La Contraseña no puede tener más de 16 caracteres.';
+        }       
         if (!values.role) {
           errors.role = 'Rol requerido';
       } 
